@@ -8,26 +8,28 @@ import GalleryPage from "./pages/GalleryPage";
 import About from "./pages/About";
 import ServicePage from "./pages/Services";
 import NotFound from "./pages/NotFound";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename="/Hair-Shop">
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/services" element={<ServicePage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+	<QueryClientProvider client={queryClient}>
+		<TooltipProvider>
+		<Toaster />
+		<Sonner />
+		<PayPalScriptProvider options={{ "clientId": "AS1lo6PLQj7ka6tcTYiqpNEUUnWGHscclbFiv-KOMBcRkEdcV8lxAwrsJjngpoya22QZ3Cnc5vE7Xm09" }}>		
+			<BrowserRouter basename="/Hair-Shop">
+				<Routes>
+				<Route path="/" element={<Index />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/gallery" element={<GalleryPage />} />
+				<Route path="/services" element={<ServicePage />} />
+				<Route path="*" element={<NotFound />} />
+				</Routes>
+			</BrowserRouter>
+		</PayPalScriptProvider>
+		</TooltipProvider>
+	</QueryClientProvider>
 );
 
 export default App;
