@@ -89,7 +89,7 @@ const BookingForm = () => {
 								purchase_units: [{
 									amount: {
 										currency_code: "USD",
-										value: "50.00",
+										value: "8.09",
 									},
 								}],
 							});
