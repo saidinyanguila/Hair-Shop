@@ -81,7 +81,7 @@ const BookingForm = () => {
 						<p><strong>Service:</strong> {services.find(s => s.id === selectedService)?.name}</p>
 						<p><strong>Date:</strong> {date && format(date, "EEEE, MMMM d, yyyy")}</p>
 						<p><strong>Time:</strong> {selectedTime}</p>
-						<p><strong>Deposit:</strong> R 150</p>
+						<p><strong>Deposit:</strong> R 150 (8.09 USD)</p>
 					</div>
 					<PayPalButtons
 						createOrder={(data, actions) => {
@@ -102,7 +102,7 @@ const BookingForm = () => {
 						}}
 					/>
 					<p className="text-sm text-muted-foreground">
-						A confirmation email will been sent to {email} after payment is completed.
+						A confirmation email will been sent to <strong>{email}</strong> after payment is completed.
 					</p>
 					<Button variant="elegant" onClick={resetForm}>
 						Cancel Appointment
