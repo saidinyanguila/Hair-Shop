@@ -10,12 +10,6 @@ const services = [
 	duration: "45-60 min",
   },
   {
-    icon: Paintbrush,
-    title: "Color & Highlights",
-    description: "Full color, balayage, highlights, and creative coloring",
-    duration: "2-3 hours",
-  },
-  {
     icon: Sparkles,
     title: "Keratin Treatment",
     description: "Smooth, frizz-free hair that lasts for months",
@@ -58,7 +52,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 justify-end md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <Card
               key={service.title}

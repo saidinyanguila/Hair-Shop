@@ -10,12 +10,11 @@ import { CalendarIcon, Clock, User, Mail, Phone, CheckCircle } from "lucide-reac
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+
 import { PayPalButtons } from "@paypal/react-paypal-js";
 
 const services = [
   { id: "haircut", name: "Haircut & Styling", duration: "45-60 min" },
-  { id: "color", name: "Color & Highlights", duration: "2-3 hours" },
   { id: "keratin", name: "Keratin Treatment", duration: "2-3 hours" },
   { id: "blowout", name: "Blowout & Styling", duration: "30-45 min" },
   { id: "bridal", name: "Bridal & Events", duration: "1-2 hours" },
@@ -36,18 +35,27 @@ const BookingForm = () => {
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isPaid, setIsPaid] = useState(false);
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		
 		if (!selectedService || !date || !selectedTime || !name || !email || !phone) {
-		toast.error("Please fill in all fields");
-		return;
+			toast.error("Please fill in all fields");
+			return;
 		}
 
 		// Simulate booking submission
 		setIsSubmitted(true);
-		toast.success("Appointment booked successfully!");
+		toast.success("Complete Payment.");
+	};
+
+	const handlePay = (details) => {
+		
+		// Simulate booking submission
+		setIsPaid(true);
+		console.log(details);
+		toast.success("Payment Complete.");
 	};
 
 	const resetForm = () => {
@@ -58,11 +66,49 @@ const BookingForm = () => {
 		setEmail("");
 		setPhone("");
 		setIsSubmitted(false);
+		setIsPaid(false);
 	};
+	
+	if (isPaid) {
+		return (
+		<section id="booking" className="py-20 md:py-32">
+			<div className="container mx-auto px-4 md:px-6">
+			<Card className="max-w-2xl mx-auto text-center py-12">
+				<CardContent className="space-y-6">
+					<div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+						<CheckCircle className="h-10 w-10 text-primary" />
+					</div>
+					<div>
+						<h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-2">
+							Payment Successful!
+						</h3>
+						<p className="text-muted-foreground">
+							Your appointment has been booked.
+						</p>
+					</div>
+					<div className="bg-muted/50 rounded-lg p-4 text-left space-y-2">
+						<p><strong>Service:</strong> {services.find(s => s.id === selectedService)?.name}</p>
+						<p><strong>Date:</strong> {date && format(date, "EEEE, MMMM d, yyyy")}</p>
+						<p><strong>Time:</strong> {selectedTime}</p>
+						<p><strong>Deposit:</strong> R 150 (8.09 USD)</p>
+					</div>
+
+					<p className="text-sm text-muted-foreground">
+						A confirmation email hes been sent to <strong>{email}</strong>.
+					</p>
+					<Button variant="elegant" onClick={resetForm}>
+						Book Another Appointment
+					</Button>
+				</CardContent>
+			</Card>
+			</div>
+		</section>
+		);
+	}
 
 	if (isSubmitted) {
 		return (
-		<section id="booking" className="py-20 md:py-32">
+		<section id="booking" className="py-20 md:py-32 z-40">
 			<div className="container mx-auto px-4 md:px-6">
 			<Card className="max-w-2xl mx-auto text-center py-12">
 				<CardContent className="space-y-6">
@@ -96,8 +142,7 @@ const BookingForm = () => {
 						}}
 						onApprove={(data, actions) => {
 							return actions.order.capture().then((details) => {
-								alert("Payment completed by " + details.payer.name.given_name);
-								console.log(details);
+								handlePay(details);
 							});
 						}}
 					/>

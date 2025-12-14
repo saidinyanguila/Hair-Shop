@@ -24,7 +24,7 @@
     --muted: 35 20% 92%;
     --muted-foreground: 30 10% 45%;
 
-    --accent: 15 60% 70%;
+    --accent: 280 60% 70%;
     --accent-foreground: 30 10% 15%;
 
     --destructive: 0 84% 60%;
@@ -32,7 +32,7 @@
 
     --border: 35 20% 85%;
     --input: 35 20% 85%;
-    --ring: 15 45% 65%;
+    --ring: 280 45% 65%;
 
     --radius: 0.75rem;
 

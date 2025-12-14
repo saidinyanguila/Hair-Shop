@@ -74,13 +74,15 @@ const Contact = () => {
           <p className="text-sm text-muted-foreground mb-4">Follow us on social media</p>
           <div className="flex justify-center gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/swaze_hair_and_beauty_salon_/"
+              target="_blank"
               className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
             >
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=100021330024094"
+              target="_blank"
               className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
             >
               <Facebook className="h-5 w-5" />
