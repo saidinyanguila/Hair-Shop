@@ -22,7 +22,7 @@ const Navbar = () => {
 					<a href="/Hair-Shop/" className="flex items-center gap-2">
 						<Scissors className="h-6 w-6 text-primary" />
 						<span className="font-display text-xl md:text-2xl font-semibold text-foreground">
-						Luxe Hair
+						Swaze Hair & Beauty
 						</span>
 					</a>
 				</div>
