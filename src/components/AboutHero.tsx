@@ -30,12 +30,12 @@ const AboutHero = () => {
                         <h1 className="font-display text-xl md:text-4xl font-semibold text-foreground">Welcome to</h1>
                         <Scissors className="h-8 w-8 text-primary" />
                         <span className="font-display text-xl md:text-4xl font-semibold text-foreground">
-                            Luxe Hair
+                            Swaze Hair & Beauty Salon
                         </span>
                     </div>
 
                     <p className="text-gray-600 mb-6">
-                        At Luxe Hair, we believe that hair is more than just style—it's a form of self-expression and a reflection of individuality. Our team of skilled stylists is dedicated to providing personalized services that cater to your unique hair needs, ensuring you leave our salon feeling your absolute best.
+                        At Swaze Hair & Beauty Salon, we believe that hair is more than just style—it's a form of self-expression and a reflection of individuality. Our team of skilled stylists is dedicated to providing personalized services that cater to your unique hair needs, ensuring you leave our salon feeling your absolute best.
                     </p>
 
                     <div className="flex gap-12 mb-10">
