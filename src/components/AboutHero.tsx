@@ -20,11 +20,8 @@ const AboutHero = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="grid grid-cols-2 gap-6">
-                    <img src="https://placehold.co/600x400" className="rounded shadow-md object-cover w-full h-full" />
-                    <img src="https://placehold.co/600x400" className="rounded shadow-md object-cover w-full h-full" />
-                    <img src="https://placehold.co/600x400" className="rounded shadow-md object-cover w-full h-full" />
-                    <img src="https://placehold.co/600x400" className="rounded shadow-md object-cover w-full h-full" />
+                <div className="w-full h-full">
+                    <img src={heroImage} className="rounded shadow-md object-cover w-full h-full" />
                 </div>
 
                 <div>
@@ -37,12 +34,8 @@ const AboutHero = () => {
                         </span>
                     </div>
 
-                    <p className="text-gray-600 mb-4">
-                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam ameteos erat ipsum et lorem et sit, sed stet lorem sit.
-                    </p>
-
                     <p className="text-gray-600 mb-6">
-                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam ameteos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.
+                        At Luxe Hair, we believe that hair is more than just style—it's a form of self-expression and a reflection of individuality. Our team of skilled stylists is dedicated to providing personalized services that cater to your unique hair needs, ensuring you leave our salon feeling your absolute best.
                     </p>
 
                     <div className="flex gap-12 mb-10">
