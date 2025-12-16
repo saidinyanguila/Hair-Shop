@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Scissors } from "lucide-react";
-import heroImage from "@/assets/hero-salon.jpg";
+import abt_img from "@/assets/abt_img.jpeg";
 
 const AboutHero = () => {
   const scrollToBooking = () => {
@@ -20,8 +20,8 @@ const AboutHero = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="w-full h-full">
-                    <img src={heroImage} className="rounded shadow-md object-cover w-full h-full" />
+                <div className="w-full h-full aspect-video">
+                    <img src={abt_img} className="aspect-video rounded shadow-md object-cover w-full h-full" />
                 </div>
 
                 <div>
