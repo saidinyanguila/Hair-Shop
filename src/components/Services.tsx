@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Scissors, Paintbrush, Sparkles, Wind, Crown, Heart } from "lucide-react";
-import heroImage from "@/assets/hero-salon.jpg";
 
 const services = [
   {
@@ -40,7 +39,7 @@ const Services = () => {
     <section id="services" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <span className="inline-block text-sm font-medium text-primary mb-3 tracking-widest uppercase">
+          <span className="inline-block text-sm font-medium text-white mb-3 tracking-widest uppercase">
             Our Services
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-4">
@@ -61,9 +60,9 @@ const Services = () => {
             >
               <CardHeader>
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="h-6 w-6 text-primary" />
+                  <service.icon className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                 <CardDescription>{service.description}</CardDescription>
               </CardHeader>
               <CardContent>

@@ -21,7 +21,7 @@ const Contact = () => {
           {/* Location */}
           <div className="text-center group">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-              <MapPin className="h-6 w-6 text-primary" />
+              <MapPin className="h-6 w-6 text-white" />
             </div>
             <h3 className="font-display text-lg font-semibold mb-2">Location</h3>
             <p className="text-muted-foreground text-sm">
@@ -34,12 +34,12 @@ const Contact = () => {
           {/* Phone */}
           <div className="text-center group">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-              <Phone className="h-6 w-6 text-primary" />
+              <Phone className="h-6 w-6 text-white" />
             </div>
             <h3 className="font-display text-lg font-semibold mb-2">Phone</h3>
             <p className="text-muted-foreground text-sm">
-              <a href="tel:+27785274823" className="hover:text-primary transition-colors">
-                +27 78 527 4823
+              <a href="tel:+27787452823" className="hover:text-primary transition-colors">
+                078 745 2823
               </a>
             </p>
           </div>
@@ -47,12 +47,12 @@ const Contact = () => {
           {/* Email */}
           <div className="text-center group">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-              <Mail className="h-6 w-6 text-primary" />
+              <Mail className="h-6 w-6 text-white" />
             </div>
             <h3 className="font-display text-lg font-semibold mb-2">Email</h3>
             <p className="text-muted-foreground text-sm">
-              <a href="mailto:hello@luxehair.com" className="hover:text-primary transition-colors">
-                hello@luxehair.com
+              <a href="mailto:bengacap2@gmail.com" className="hover:text-primary transition-colors">
+                bengacap2@gmail.com
               </a>
             </p>
           </div>
@@ -60,7 +60,7 @@ const Contact = () => {
           {/* Hours */}
           <div className="text-center group">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-              <Clock className="h-6 w-6 text-primary" />
+              <Clock className="h-6 w-6 text-white" />
             </div>
             <h3 className="font-display text-lg font-semibold mb-2">Hours</h3>
             <p className="text-muted-foreground text-sm">

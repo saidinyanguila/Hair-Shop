@@ -25,7 +25,7 @@ export default function Gallery() {
             {/* Masonry Grid */}
             <section className="py-20 md:py-32 bg-muted/30">
                 <div className="text-center mb-16">
-                    <span className="inline-block text-xl font-medium text-primary mb-3 tracking-widest uppercase">
+                    <span className="inline-block text-xl font-medium text-white mb-3 tracking-widest uppercase">
                         Gallery
                     </span>
                     <p className="text-muted-foreground max-w-2xl mx-auto">

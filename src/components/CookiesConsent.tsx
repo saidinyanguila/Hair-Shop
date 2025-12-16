@@ -25,8 +25,8 @@ const CookiesConsent = () => {
 						We use cookies to improve your experience, analyse site usage, and deliver personalized content. By clicking "Agree to all cookies" you accept the use of all cookies. You can also choose to reject non-essential cookies.
 					</p>
 					<div className="cookie-consent__buttons" role="group" aria-label="Cookie actions">
-						<button id="cookie-reject" className="btn btn--ghost" type="button" onClick={() => {setConsent('reject')}}>Reject</button>
-						<button id="cookie-agree" className="btn btn--primary" type="button" onClick={() => {setConsent('agree')}}>Accept cookies</button>
+						<button id="cookie-reject" className="btn btn--white" type="button" onClick={() => {setConsent('reject')}}>Reject</button>
+						<button id="cookie-agree" className="btn btn--white" type="button" onClick={() => {setConsent('agree')}}>Accept cookies</button>
 					</div>
 				</div>
 			</div>

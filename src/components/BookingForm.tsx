@@ -163,7 +163,7 @@ const BookingForm = () => {
 		<section id="booking" className="py-20 md:py-32">
 			<div className="container mx-auto px-4 md:px-6">
 				<div className="text-center mb-16">
-					<span className="inline-block text-sm font-medium text-primary mb-3 tracking-widest uppercase">
+					<span className="inline-block text-sm font-medium text-white mb-3 tracking-widest uppercase">
 						Book Now
 					</span>
 					<h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-4">
@@ -175,7 +175,7 @@ const BookingForm = () => {
 				</div>
 				<Card className="max-w-2xl mx-auto">
 					<CardHeader>
-						<CardTitle>Book an Appointment</CardTitle>
+						<CardTitle className="text-white">Book an Appointment</CardTitle>
 						<CardDescription>Fill in your details to reserve your spot</CardDescription>
 					</CardHeader>
 
@@ -183,10 +183,10 @@ const BookingForm = () => {
 						<form onSubmit={handleSubmit} className="space-y-6">
 						{/* Service Selection */}
 						<div className="space-y-2">
-							<Label htmlFor="service">Select Service</Label>
+							<Label className="text-white" htmlFor="service">Select Service</Label>
 							<Select value={selectedService} onValueChange={setSelectedService}>
 							<SelectTrigger>
-								<SelectValue placeholder="Choose a service" />
+								<SelectValue className="text-white" placeholder="Choose a service" />
 							</SelectTrigger>
 							<SelectContent>
 								{services.map((service) => (
@@ -204,7 +204,7 @@ const BookingForm = () => {
 						{/* Date & Time */}
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 							<div className="space-y-2">
-							<Label>Select Date</Label>
+							<Label className="text-white">Select Date</Label>
 							<Popover>
 								<PopoverTrigger asChild>
 								<Button
@@ -232,11 +232,11 @@ const BookingForm = () => {
 							</div>
 
 							<div className="space-y-2">
-							<Label>Select Time</Label>
+							<Label className="text-white">Select Time</Label>
 							<Select value={selectedTime} onValueChange={setSelectedTime}>
 								<SelectTrigger>
 								<Clock className="mr-2 h-4 w-4 text-muted-foreground" />
-								<SelectValue placeholder="Choose time" />
+								<SelectValue className="text-white" placeholder="Choose time" />
 								</SelectTrigger>
 								<SelectContent>
 								{timeSlots.map((time) => (
@@ -252,7 +252,7 @@ const BookingForm = () => {
 						{/* Personal Details */}
 						<div className="space-y-4">
 							<div className="space-y-2">
-							<Label htmlFor="name">Full Name</Label>
+							<Label className="text-white" htmlFor="name">Full Name</Label>
 							<div className="relative">
 								<User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
 								<Input
@@ -267,7 +267,7 @@ const BookingForm = () => {
 
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 							<div className="space-y-2">
-								<Label htmlFor="email">Email</Label>
+								<Label className="text-white" htmlFor="email">Email</Label>
 								<div className="relative">
 								<Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
 								<Input
@@ -282,7 +282,7 @@ const BookingForm = () => {
 							</div>
 
 							<div className="space-y-2">
-								<Label htmlFor="phone">Phone</Label>
+								<Label className="text-white" htmlFor="phone">Phone</Label>
 								<div className="relative">
 								<Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
 								<Input

@@ -27,7 +27,7 @@ const MiniGallery = () => {
     <section id="services" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-            <span className="inline-block text-sm font-medium text-primary mb-3 tracking-widest uppercase">
+            <span className="inline-block text-sm font-medium text-white mb-3 tracking-widest uppercase">
                 Gallery
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-foreground mb-4">
@@ -46,7 +46,7 @@ const MiniGallery = () => {
                     </CardHeader>
 
                     <CardContent>
-                        <CardTitle className="text-xl">{service.title}</CardTitle>
+                        <CardTitle className="text-white">{service.title}</CardTitle>
                         <CardDescription>{service.description}</CardDescription>
                     </CardContent>
                 </Card>

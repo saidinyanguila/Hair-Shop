@@ -20,7 +20,7 @@ const Navbar = () => {
 				{/* Logo */}
 				<div className="flex items-center gap-2">
 					<a href="/Hair-Shop/" className="flex items-center gap-2">
-						<Scissors className="h-6 w-6 text-primary" />
+						<Scissors className="h-6 w-6 text-white" />
 						<span className="font-display text-xl md:text-2xl font-semibold text-foreground">
 						Swaze Hair & Beauty
 						</span>
@@ -38,12 +38,9 @@ const Navbar = () => {
 					<a href="/Hair-Shop/services" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
 						Services
 					</a>
-					<a href="tel:+27785274823" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+					<a href="tel:+27787452823" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
 						Contact
 					</a>
-					{/* <button onClick={() => scrollToSection("contact")} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-						Scroll To Contact
-					</button> */}
 					<Button variant="hero" size="sm" onClick={() => scrollToSection("booking")}>
 						Book Appointment
 					</Button>
@@ -72,7 +69,7 @@ const Navbar = () => {
 					<a href="/Hair-Shop/services" className="text-sm font-medium text-muted-foreground hover:text-primary  transition-colors">
 						Services
 					</a>
-					<a href="tel:+27785274823" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+					<a href="tel:+27787452823" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
 						Contact
 					</a>
 					<Button variant="hero" onClick={() => scrollToSection("booking")} className="w-full">
